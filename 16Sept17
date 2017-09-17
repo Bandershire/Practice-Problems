@@ -1,0 +1,35 @@
+"""Formating strings, because concatenation is messy."""
+
+
+individual = {'address': 'Nobody', 'answer': 42}
+
+some_dude = ['Lame', 69]
+
+vocalization = 'My name is {0[address]} and I am {0[answer]} ' \
+           'years old'.format(individual)
+
+utterance = 'My name is {0[0]} and I am {0[1]} ' \
+           'years old'.format(some_dude)
+
+print(vocalization)
+print(utterance)
+
+tag = 'p'
+text = 'Shhh...You don\'t see anything'
+
+stuff = '<{0}>{1}</{0}>'.format(tag, text)
+print(stuff)
+
+
+class Doe():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+john = Doe('John', '55')
+
+mystery = 'My name is {0.name} and I am {0.age} years old.'.format(john)
+print(mystery)
+
+speak = 'My name is {name} and I am {age} years old.'.format(name='John', age='55')
+print(speak)
